@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ywn-rk-KtC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="NXQ-q9-exb">
+            <objects>
+                <viewController storyboardIdentifier="ProfileVC" automaticallyAdjustsScrollViewInsets="NO" id="Ywn-rk-KtC" customClass="ProfileVC" customModule="WisOpt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xNW-3j-j9F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="H3k-dg-xK2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="YhC-8c-RAx"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="jVe-a5-clf" kind="show" identifier="segueForPopup" action="showDetailViewController:sender:" id="dfq-8H-DRe"/>
+                        <segue destination="M0S-5e-DXU" kind="show" identifier="SettingsVC" id="ETV-eM-2gq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bh7-RN-4Hq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="109.29535232383809"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="bE0-fP-mFE">
+            <objects>
+                <viewController storyboardIdentifier="settingsVC" automaticallyAdjustsScrollViewInsets="NO" id="M0S-5e-DXU" userLabel="Profile" customClass="SettingsViewController" customModule="WisOpt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2jc-oJ-JSi"/>
+                        <viewControllerLayoutGuide type="bottom" id="fwq-hH-DMq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5cS-Nx-GIw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="SX8-Ks-vKG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="XM6-98-ZUq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sqC-v5-kB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639" y="114"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="4gX-uh-tCz">
+            <objects>
+                <viewController storyboardIdentifier="studentProfile" id="PgF-An-2Sh" customClass="ProfileViewController" customModule="WisOpt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aWG-DC-VMb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rkT-eX-WfZ"/>
+                    </view>
+                    <connections>
+                        <segue destination="lIc-eF-jlZ" kind="show" identifier="segueForPopup" id="eCn-7u-jA8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLE-lz-hrN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3438" y="87"/>
+        </scene>
+        <!--popUpVC-->
+        <scene sceneID="it2-Xa-UMD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LastTopic" referencedIdentifier="popUpVC" id="lIc-eF-jlZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9i-aF-wCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4180" y="245"/>
+        </scene>
+        <!--popUpVC-->
+        <scene sceneID="HPq-dI-iId">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="popUpVC" storyboardName="LastTopic" referencedIdentifier="popUpVC" id="jVe-a5-clf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1uW-xa-yB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="746" y="211"/>
+        </scene>
+    </scenes>
+</document>

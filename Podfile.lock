@@ -1,0 +1,117 @@
+PODS:
+  - Alamofire (4.7.1)
+  - BarcodeScanner (4.1.3)
+  - BEMCheckBox (1.4.1)
+  - ChartLegends (0.0.6)
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
+  - Fabric (1.7.6)
+  - Firebase/Core (4.11.0):
+    - FirebaseAnalytics (= 4.1.0)
+    - FirebaseCore (= 4.0.18)
+  - Firebase/Messaging (4.11.0):
+    - Firebase/Core
+    - FirebaseMessaging (= 2.1.1)
+  - FirebaseAnalytics (4.1.0):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - nanopb (~> 0.3)
+  - FirebaseCore (4.0.18):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (2.0.10):
+    - FirebaseCore (~> 4.0)
+  - FirebaseMessaging (2.1.1):
+    - FirebaseAnalytics (~> 4.1)
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - Protobuf (~> 3.5)
+  - FSCalendar (2.7.9)
+  - GoogleToolboxForMac/Defines (2.1.3)
+  - GoogleToolboxForMac/Logger (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/NSData+zlib (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - InAppNotify (0.1.4)
+  - IQKeyboardManagerSwift (5.0.8)
+  - Kingfisher (4.7.0)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
+  - ObjectMapper (3.1.0)
+  - Onboard (2.3.3)
+  - PieCharts (0.0.6)
+  - Protobuf (3.5.0)
+  - razorpay-pod (1.0.12)
+  - SwiftEventBus (2.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - BarcodeScanner
+  - BEMCheckBox
+  - ChartLegends
+  - Charts
+  - Crashlytics (~> 3.9)
+  - Fabric
+  - Firebase/Core
+  - Firebase/Messaging
+  - FSCalendar
+  - InAppNotify
+  - IQKeyboardManagerSwift
+  - Kingfisher (~> 4.0)
+  - NVActivityIndicatorView
+  - ObjectMapper (~> 3.0)
+  - Onboard
+  - PieCharts
+  - razorpay-pod
+  - SwiftEventBus (from `https://github.com/cesarferreira/SwiftEventBus.git`, tag `2.2.0`)
+
+EXTERNAL SOURCES:
+  SwiftEventBus:
+    :git: https://github.com/cesarferreira/SwiftEventBus.git
+    :tag: 2.2.0
+
+CHECKOUT OPTIONS:
+  SwiftEventBus:
+    :git: https://github.com/cesarferreira/SwiftEventBus.git
+    :tag: 2.2.0
+
+SPEC CHECKSUMS:
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  BarcodeScanner: fce1ad2b3f28286b1ab5091fe0979789618bee27
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  ChartLegends: bd0b58d74772f35dc14fc6a3ff245cccf3204a59
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
+  Firebase: cc13dfab1038c8b45d7903e01fc690451d6d0b24
+  FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
+  FirebaseCore: b981f47e5254cbcfdeb483355300d743f6fcab2c
+  FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
+  FirebaseMessaging: db0e01c52ef7e1f42846431273558107d084ede4
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
+  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  InAppNotify: b7b20919a3319d2a862264c7f5dc7791cf8454b8
+  IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
+  PieCharts: f4f866b3ed45dbeda355cc64664091024a9819ee
+  Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  razorpay-pod: 5907bbd8487c1d6b21619556cce1933ac2350fdb
+  SwiftEventBus: 39cde57d1881f9d6e8afb1f9e41f973e331bf847
+
+PODFILE CHECKSUM: 2ac98591cba58f8210e4ceee41e97398c55b6b97
+
+COCOAPODS: 1.3.1

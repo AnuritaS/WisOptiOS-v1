@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Enlarge Image View Controller-->
+        <scene sceneID="WaQ-RS-Tos">
+            <objects>
+                <viewController storyboardIdentifier="enlargeImage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vth-cd-7Q9" customClass="EnlargeImageViewController" customModule="WisOpt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P89-4W-gH8"/>
+                        <viewControllerLayoutGuide type="bottom" id="FFs-DR-New"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O3S-xc-bwG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="shY-tV-Qno">
+                                <rect key="frame" x="0.0" y="102" width="375" height="428"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRE-n0-0eQ">
+                                <rect key="frame" x="319" y="581" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Sao-cf-5u7"/>
+                                    <constraint firstAttribute="height" constant="40" id="pNb-WI-eFN"/>
+                                </constraints>
+                                <state key="normal" image="download"/>
+                                <connections>
+                                    <action selector="downloadImage:" destination="vth-cd-7Q9" eventType="touchUpInside" id="m3b-mv-CjA"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comments" translatesAutoresizingMaskIntoConstraints="NO" id="Cyi-3d-k5b">
+                                <rect key="frame" x="6" y="586" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WvV-bq-wnv"/>
+                                    <constraint firstAttribute="width" constant="30" id="ZKd-Ww-sIs"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3y2-Nn-ayQ">
+                                <rect key="frame" x="36" y="540" width="75" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="ENL-lI-0vl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Replies">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openReplies:" destination="vth-cd-7Q9" eventType="touchUpInside" id="k8U-0r-dwz"/>
+                                    <segue destination="unH-c4-sSk" kind="popoverPresentation" identifier="commentVC" popoverAnchorView="3y2-Nn-ayQ" id="n56-yw-O11">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2m-16-IqR">
+                                <rect key="frame" x="0.0" y="37" width="124" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="bMg-uB-Pip"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.16771414875984192" green="0.47090315818786621" blue="0.98505812883377075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="vth-cd-7Q9" eventType="touchUpInside" id="4az-KN-5pf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="shY-tV-Qno" firstAttribute="leading" secondItem="d2m-16-IqR" secondAttribute="leading" id="1XG-kn-JPT"/>
+                            <constraint firstItem="d2m-16-IqR" firstAttribute="leading" secondItem="O3S-xc-bwG" secondAttribute="leading" id="2H3-uB-nwi"/>
+                            <constraint firstItem="gRE-n0-0eQ" firstAttribute="centerY" secondItem="3y2-Nn-ayQ" secondAttribute="centerY" id="6tH-c5-qiO"/>
+                            <constraint firstItem="3y2-Nn-ayQ" firstAttribute="leading" secondItem="Cyi-3d-k5b" secondAttribute="trailing" id="9vv-Ap-9Xc"/>
+                            <constraint firstItem="FFs-DR-New" firstAttribute="top" secondItem="gRE-n0-0eQ" secondAttribute="bottom" constant="46" id="EXf-b0-tYM"/>
+                            <constraint firstAttribute="trailing" secondItem="shY-tV-Qno" secondAttribute="trailing" id="GMi-vD-elM"/>
+                            <constraint firstItem="3y2-Nn-ayQ" firstAttribute="top" secondItem="shY-tV-Qno" secondAttribute="bottom" constant="10" id="N4X-MF-dBf"/>
+                            <constraint firstItem="shY-tV-Qno" firstAttribute="top" secondItem="d2m-16-IqR" secondAttribute="bottom" constant="31" id="WY4-eP-gGV"/>
+                            <constraint firstItem="FFs-DR-New" firstAttribute="top" secondItem="3y2-Nn-ayQ" secondAttribute="bottom" constant="4" id="Zn5-Hd-CJo"/>
+                            <constraint firstItem="Cyi-3d-k5b" firstAttribute="leading" secondItem="O3S-xc-bwG" secondAttribute="leadingMargin" constant="-10" id="bgN-HX-hky"/>
+                            <constraint firstAttribute="trailing" secondItem="gRE-n0-0eQ" secondAttribute="trailing" constant="16" id="ehx-qs-Nkq"/>
+                            <constraint firstItem="Cyi-3d-k5b" firstAttribute="centerY" secondItem="3y2-Nn-ayQ" secondAttribute="centerY" id="j44-D8-wmA"/>
+                            <constraint firstItem="d2m-16-IqR" firstAttribute="top" secondItem="P89-4W-gH8" secondAttribute="bottom" constant="17" id="raA-iU-mYM"/>
+                            <constraint firstItem="FFs-DR-New" firstAttribute="top" secondItem="Cyi-3d-k5b" secondAttribute="bottom" constant="51" id="tBi-DC-1cM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentsButton" destination="Cyi-3d-k5b" id="iGX-Jw-Dm4"/>
+                        <outlet property="downloadImageB" destination="gRE-n0-0eQ" id="XpL-qv-OIw"/>
+                        <outlet property="enlargeImage" destination="shY-tV-Qno" id="V7B-DL-S7I"/>
+                        <outlet property="replies" destination="3y2-Nn-ayQ" id="VnX-4U-dVY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPQ-tP-2fq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2372" y="2425.6371814092954"/>
+        </scene>
+        <!--replyVC-->
+        <scene sceneID="Glb-1n-uew">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="replyVC" storyboardName="Reply" referencedIdentifier="replyVC" id="unH-c4-sSk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iUt-qr-Gfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1195" y="2456"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="comments" width="128" height="128"/>
+        <image name="download" width="80" height="80"/>
+    </resources>
+</document>

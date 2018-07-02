@@ -1,0 +1,25 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target 'WisOpt' do
+    pod 'Alamofire'
+    pod 'ObjectMapper', '~> 3.0'
+    pod 'Kingfisher', '~> 4.0'
+    pod 'IQKeyboardManagerSwift'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
+    pod 'BEMCheckBox'
+    pod 'BarcodeScanner'
+    pod 'FSCalendar'
+    pod 'Onboard'
+    pod 'Fabric'
+    pod 'Crashlytics', '~>  3.9'
+    pod 'InAppNotify'
+    pod 'SwiftEventBus', :tag => '2.2.0', :git => 'https://github.com/cesarferreira/SwiftEventBus.git'
+    pod 'Charts'
+    pod 'NVActivityIndicatorView'
+    pod 'razorpay-pod'
+    pod 'PieCharts'
+    pod 'ChartLegends'
+end

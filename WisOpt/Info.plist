@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>CFBundleDevelopmentRegion</key>
+        <string>en</string>
+        <key>CFBundleExecutable</key>
+        <string>$(EXECUTABLE_NAME)</string>
+        <key>CFBundleIcons</key>
+        <dict/>
+        <key>CFBundleIcons~ipad</key>
+        <dict/>
+        <key>CFBundleIdentifier</key>
+        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+        <key>CFBundleInfoDictionaryVersion</key>
+        <string>6.0</string>
+        <key>CFBundleName</key>
+        <string>$(PRODUCT_NAME)</string>
+        <key>CFBundlePackageType</key>
+        <string>APPL</string>
+        <key>CFBundleShortVersionString</key>
+        <string>2.3</string>
+        <key>CFBundleVersion</key>
+        <string>1</string>
+        <key>Fabric</key>
+        <dict>
+            <key>APIKey</key>
+            <string>a412691a9cfb1a959849cd247bf3fcf40aaecc1b</string>
+            <key>Kits</key>
+            <array>
+                <dict>
+                    <key>KitInfo</key>
+                    <dict/>
+                    <key>KitName</key>
+                    <string>Crashlytics</string>
+                </dict>
+            </array>
+        </dict>
+        <key>LSRequiresIPhoneOS</key>
+        <true/>
+        <key>NSAppleMusicUsageDescription</key>
+        <string>WisOpt needs to access your camera to scan code/upload image</string>
+        <key>NSCalendarsUsageDescription</key>
+        <string>WisOpt requires to show calendar events</string>
+        <key>NSCameraUsageDescription</key>
+        <string>WisOpt needs to access your camera to scan code/upload image</string>
+        <key>NSMicrophoneUsageDescription</key>
+        <string>WisOpt requires to access your microphone to make calls</string>
+        <key>NSPhotoLibraryAddUsageDescription</key>
+        <string>WisOpt requires to download images</string>
+        <key>NSPhotoLibraryUsageDescription</key>
+        <string>WisOpt requires to access your photos to share images</string>
+        <key>UILaunchStoryboardName</key>
+        <string>LaunchScreen</string>
+        <key>UIMainStoryboardFile</key>
+        <string>Main</string>
+        <key>UIRequiredDeviceCapabilities</key>
+        <array>
+            <string>armv7</string>
+        </array>
+        <key>UISupportedInterfaceOrientations</key>
+        <array>
+            <string>UIInterfaceOrientationPortrait</string>
+        </array>
+    </dict>
+</plist>

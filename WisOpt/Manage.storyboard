@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SDN-Jd-2sw">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Manage-->
+        <scene sceneID="jEi-ae-gkO">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="SDN-Jd-2sw" customClass="ManageViewController" customModule="WisOpt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qc0-vA-Sns"/>
+                        <viewControllerLayoutGuide type="bottom" id="ydq-cG-Mqt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9By-iY-9ff">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejf-vx-tbf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tut-rW-tNp" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="650"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VCy-g2-KUe">
+                                                <rect key="frame" x="10" y="20" width="355" height="367"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zp-sQ-X2t">
+                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="uvE-a2-jTW"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unique code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxX-D0-gPb">
+                                                        <rect key="frame" x="0.0" y="50" width="355" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="6Q6-Kd-ceP"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Uk-Lr-4Kv">
+                                                        <rect key="frame" x="0.0" y="100" width="355" height="50"/>
+                                                        <color key="backgroundColor" red="0.2784313725" green="0.41568627450000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="GDp-Sg-SvU"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                        <state key="normal" title="Create Group">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onClickCreateGroup:" destination="SDN-Jd-2sw" eventType="touchUpInside" id="oJj-ik-yhp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUA-Rf-FIu">
+                                                        <rect key="frame" x="0.0" y="160" width="355" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                                                        <color key="textColor" red="0.27843137254901962" green="0.41568627450980389" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4EX-rE-rl9">
+                                                        <rect key="frame" x="0.0" y="183.5" width="355" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="7Wr-cb-nw7"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83k-AU-03I">
+                                                        <rect key="frame" x="0.0" y="233.5" width="355" height="50"/>
+                                                        <color key="backgroundColor" red="0.2784313725" green="0.41568627450000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="NKu-mc-foS"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                        <state key="normal" title="Join Group">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onClickJoinGroup:" destination="SDN-Jd-2sw" eventType="touchUpInside" id="79k-RP-JF6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld6-9M-ucY">
+                                                        <rect key="frame" x="0.0" y="293.5" width="355" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                                                        <color key="textColor" red="0.27843137254901962" green="0.41568627450980389" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQX-Wa-OFG">
+                                                        <rect key="frame" x="0.0" y="317" width="355" height="50"/>
+                                                        <color key="backgroundColor" red="0.2784313725" green="0.41568627450000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Y8K-X3-OKJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                        <state key="normal" title="Scan Code">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="scanCode:" destination="SDN-Jd-2sw" eventType="touchUpInside" id="l27-Ef-kjp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.2784313725" green="0.41568627450000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="650" id="AGo-B9-bpS"/>
+                                            <constraint firstItem="VCy-g2-KUe" firstAttribute="leading" secondItem="tut-rW-tNp" secondAttribute="leading" constant="10" id="Jed-SG-qID"/>
+                                            <constraint firstAttribute="trailing" secondItem="VCy-g2-KUe" secondAttribute="trailing" constant="10" id="URA-px-Ub9"/>
+                                            <constraint firstItem="VCy-g2-KUe" firstAttribute="top" secondItem="tut-rW-tNp" secondAttribute="top" constant="20" id="wVy-uA-bfb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tut-rW-tNp" firstAttribute="leading" secondItem="ejf-vx-tbf" secondAttribute="leading" id="EOK-HE-rXy"/>
+                                    <constraint firstItem="tut-rW-tNp" firstAttribute="top" secondItem="ejf-vx-tbf" secondAttribute="top" id="b8z-TA-FjV"/>
+                                    <constraint firstAttribute="trailing" secondItem="tut-rW-tNp" secondAttribute="trailing" id="eTs-os-f9R"/>
+                                    <constraint firstAttribute="bottom" secondItem="tut-rW-tNp" secondAttribute="bottom" id="qSm-WD-0Ns"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ejf-vx-tbf" firstAttribute="top" secondItem="qc0-vA-Sns" secondAttribute="bottom" id="4RQ-9Q-NPG"/>
+                            <constraint firstItem="tut-rW-tNp" firstAttribute="width" secondItem="9By-iY-9ff" secondAttribute="width" id="IMM-Qn-Fug"/>
+                            <constraint firstAttribute="trailing" secondItem="ejf-vx-tbf" secondAttribute="trailing" id="Tqq-H7-Wdi"/>
+                            <constraint firstItem="ydq-cG-Mqt" firstAttribute="top" secondItem="ejf-vx-tbf" secondAttribute="bottom" id="YbV-cg-acA"/>
+                            <constraint firstItem="ejf-vx-tbf" firstAttribute="leading" secondItem="9By-iY-9ff" secondAttribute="leading" id="eXW-5d-4Cv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Manage" id="niH-bB-V1j"/>
+                    <connections>
+                        <outlet property="OrLabel" destination="GUA-Rf-FIu" id="ker-PS-pEU"/>
+                        <outlet property="createGroupB" destination="9Uk-Lr-4Kv" id="UvB-LB-CFI"/>
+                        <outlet property="groupNameTF" destination="0zp-sQ-X2t" id="gtk-SS-2XQ"/>
+                        <outlet property="joinCodeTF" destination="4EX-rE-rl9" id="9f8-rb-pu2"/>
+                        <outlet property="joinGroupB" destination="83k-AU-03I" id="fKU-B7-0a9"/>
+                        <outlet property="scanB" destination="uQX-Wa-OFG" id="NbT-jx-DTT"/>
+                        <outlet property="uniqueCodeTF" destination="qxX-D0-gPb" id="Y6G-3O-s5G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUs-nD-EB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212" y="2128"/>
+        </scene>
+    </scenes>
+</document>
