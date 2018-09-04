@@ -34,9 +34,9 @@ class PaymentViewController: UIViewController, RazorpayPaymentCompletionProtocol
             "amount": "100",
             "description": "purchase description",
             "image": "https://url-to-image.png",
-            "name": "WisPay",
+            "name": "Pay",
             "prefill": [
-                "contact": "9176442606",
+                "contact": "NUMBER",
                 "email": "foo@bar.com"
             ],
             "theme": [

@@ -145,7 +145,7 @@ class ReplyViewController: UIViewController, UIDocumentInteractionControllerDele
             print("DOCUMENT NOT AVAILABLE");
             let destination: DownloadRequest.DownloadFileDestination = { _, _ in
                 let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-                let fileURL = documentsURL.appendingPathComponent("WisOpt/Documents/groupDocument\(self.id).\(self.exten)")
+                let fileURL = documentsURL.appendingPathComponent("")
 
                 return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
             }
@@ -193,7 +193,7 @@ class ReplyViewController: UIViewController, UIDocumentInteractionControllerDele
         print("url: \(r_url)")
 
         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let fileURL = documentsURL.appendingPathComponent("WisOpt/ReplyDocs/replyDocument\(r_id).\(r_exten)")
+        let fileURL = documentsURL.appendingPathComponent("")
 
         print(fileURL.relativeString)
 
@@ -210,7 +210,7 @@ class ReplyViewController: UIViewController, UIDocumentInteractionControllerDele
             print("DOCUMENT NOT AVAILABLE");
             let destination: DownloadRequest.DownloadFileDestination = { _, _ in
                 let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-                let fileURL = documentsURL.appendingPathComponent("WisOpt/ReplyDocs/replyDocument\(self.r_id).\(self.r_exten)")
+                let fileURL = documentsURL.appendingPathComponent("")
 
                 return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
             }
@@ -261,7 +261,7 @@ class ReplyViewController: UIViewController, UIDocumentInteractionControllerDele
     func getReplies() {
         let message_id = message!.messageId!
 
-        let url = URL(string: Utils.BASE_URL + "v2/getreply")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let tc = Session.getString(forKey: Session.TOKEN_CODE)
 
         let param: [String: String] = ["userId": String(describing: Session.getInteger(forKey: Session.ID)), "token": tc, "messageId": "\(message_id)"]
@@ -375,7 +375,7 @@ class ReplyViewController: UIViewController, UIDocumentInteractionControllerDele
         if !(reply?.isEmpty)! {
             sendB.isEnabled = false
 
-            let url = URL(string: Utils.BASE_URL + "v2/reply")!
+            let url = URL(string: Utils.BASE_URL + "API")!
             let tc = Session.getString(forKey: Session.TOKEN_CODE)
             
             let param: [String: String] = ["token": tc, "a_id": "\(a_id)", "group_id": "\(g_id)", "u_id": "\(u_id)", "message": "\(reply!)", "time": "\(dateString)"]
@@ -653,7 +653,7 @@ extension ReplyViewController: UIDocumentMenuDelegate, UIDocumentPickerDelegate,
                     multipartFormData.append(String(Session.getInteger(forKey: Session.ID)).data(using: String.Encoding.utf8)!, withName: "u_id")
                     multipartFormData.append(Session.getString(forKey: Session.TOKEN_CODE).data(using: String.Encoding.utf8)!, withName: "token")
                 },
-                to: Utils.BASE_URL + "v2/reply/file",
+                to: Utils.BASE_URL + "API",
                 encodingCompletion: { encodingResult in
 
                     switch encodingResult {
@@ -733,7 +733,7 @@ extension ReplyViewController: UIDocumentMenuDelegate, UIDocumentPickerDelegate,
                         multipartFormData.append(Session.getString(forKey: Session.TOKEN_CODE).data(using: String.Encoding.utf8)!, withName: "token")
 
                     },
-                    to: Utils.BASE_URL + "v2/reply/file",
+                    to: Utils.BASE_URL + "API",
                     encodingCompletion: { encodingResult in
                         switch encodingResult {
                         case .success(let upload, _, _):

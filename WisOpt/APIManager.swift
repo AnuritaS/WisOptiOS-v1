@@ -22,7 +22,7 @@ class APIManager: NSObject {
         let tc = Session.getString(forKey: Session.TOKEN_CODE)
 
         let param: [String: String] = ["userId": "\(u_id)", "token": "\(tc)"]
-        Alamofire.request(Utils.BASE_URL + "v2/calendar/course", method: .post, parameters: param).responseJSON { response in
+        Alamofire.request(Utils.BASE_URL + "API", method: .post, parameters: param).responseJSON { response in
             switch response.result {
             case .success:
 

@@ -322,7 +322,7 @@ extension MessageViewController: UITableViewDelegate, UITableViewDataSource, UID
         let g_id = group!.groupId!
         print("\(u_id) \(g_id)")
 
-        let url = URL(string: Utils.BASE_URL + "v2/getannouncement")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let param: [String: String] = ["token": Session.getString(forKey: Session.TOKEN_CODE), "groupId": "\(g_id)", "userId": "\(u_id)"]
         //NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData())
 
@@ -429,7 +429,7 @@ extension MessageViewController: UITableViewDelegate, UITableViewDataSource, UID
         if !(message?.isEmpty)! {
             sendB.isEnabled = false
 
-            let url = URL(string: Utils.BASE_URL + "v2/send")!
+            let url = URL(string: Utils.BASE_URL + "API")!
             let tc = Session.getString(forKey: Session.TOKEN_CODE)
 
             let param: [String: String] = ["userId": String(Session.getInteger(forKey: Session.ID)), "token": tc, "groupId": "\(g_id)", "message": "\(message!)", "time": "\(dateString)"]
@@ -558,7 +558,7 @@ extension MessageViewController: UITableViewDelegate, UITableViewDataSource, UID
                     multipartFormData.append(Session.getString(forKey: Session.TOKEN_CODE).data(using: String.Encoding.utf8)!, withName: "token")
                     multipartFormData.append(String(Session.getInteger(forKey: Session.ID)).data(using: String.Encoding.utf8)!, withName: "userId")
                 },
-                to: Utils.BASE_URL + "v2/send/file",
+                to: Utils.BASE_URL + "API",
                 encodingCompletion: { encodingResult in
 
                     switch encodingResult {
@@ -638,7 +638,7 @@ extension MessageViewController: UITableViewDelegate, UITableViewDataSource, UID
                         multipartFormData.append(String(Session.getInteger(forKey: Session.ID)).data(using: String.Encoding.utf8)!, withName: "userId")
 
                     },
-                    to: Utils.BASE_URL + "v2/send/file",
+                    to: Utils.BASE_URL + "API",
                     encodingCompletion: { encodingResult in
                         switch encodingResult {
                         case .success(let upload, _, _):

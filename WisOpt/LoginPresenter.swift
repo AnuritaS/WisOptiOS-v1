@@ -19,7 +19,7 @@ class LoginPresenter {
     func loginUser(email: String, password: String) {
         print("Email: \(email), Password: \(password)")
 
-        let url = URL(string: Utils.BASE_URL + "v2/login")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let param: [String: String] = ["email": "\(email)", "password": "\(password)"]
 
         Alamofire.request(url, method: .post, parameters: param)

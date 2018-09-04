@@ -115,7 +115,7 @@ extension SettingsViewController {
     }
 
     func removeToken(token: String) {
-        let url = URL(string: Utils.BASE_URL + "v2/device/remove")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let param: [String: String] = ["token": "\(token)"]
 
         Alamofire.request(url, method: .post, parameters: param)

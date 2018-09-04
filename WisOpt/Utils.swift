@@ -12,9 +12,7 @@ import FirebaseMessaging
 
 class Utils {
     static var stud = Bool()
-    static let BASE_URL = "https://www.wisopt.com/"
-    //test
-    //static let BASE_URL = "http://13.127.34.159/"
+    static let BASE_URL = "WEBSITE"
 
     static let SUPPORTED_DOCUMENT_TYPES = ["jpg", "jpeg", "png", "JPG", "JPEG", "PNG", "pdf", "xls",
                                            "xlsx", "txt", "ppt", "pptx", "doc", "docx", "PDF", "XLS", "XLSX",

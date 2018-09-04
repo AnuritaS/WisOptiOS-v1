@@ -123,7 +123,7 @@ extension ContactViewController {
     func sendFeedback(email: String, subject: String, description: String, type: String) {
         feedbackButton.isEnabled = false
 
-        let url = URL(string: Utils.BASE_URL + "room/v2/contactus")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let tc = Session.getString(forKey: Session.TOKEN_CODE)
         
         let param: [String: String] = ["token": tc, "u_id": "-1", "subject": "\(subject)", "type": type, "message": "\(description)\nBy\n\(email)"]

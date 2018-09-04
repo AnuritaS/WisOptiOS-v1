@@ -93,7 +93,7 @@ class ManageViewController: UIViewController {
         let u_id = Session.getInteger(forKey: Session.ID)
         createGroupB.isEnabled = false
 
-        let url = URL(string: Utils.BASE_URL + "v2/create")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let tc = Session.getString(forKey: Session.TOKEN_CODE)
         
         let param: [String: String] = ["token": tc, "subName": "\(groupName)", "subCode": "\(groupCode)", "userId": "\(u_id)"]
@@ -133,7 +133,7 @@ class ManageViewController: UIViewController {
         let u_id = Session.getInteger(forKey: Session.ID)
         joinGroupB.isEnabled = false
 
-        let url = URL(string: Utils.BASE_URL + "v2/join")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let param: [String: String] = ["token": Session.getString(forKey: Session.TOKEN_CODE), "code": "\(groupCode)", "userId": "\(u_id)"]
 
         Alamofire.request(url, method: .post, parameters: param)

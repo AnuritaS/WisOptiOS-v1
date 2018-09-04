@@ -58,7 +58,7 @@ class ForgotViewController: ViewController {
 
         print("\(email)")
 
-        let url = URL(string: Utils.BASE_URL + "v2/forget")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let param: [String: String] = ["email": "\(email)"]
 
         Alamofire.request(url, method: .post, parameters: param)

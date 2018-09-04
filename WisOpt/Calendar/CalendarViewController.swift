@@ -277,7 +277,7 @@ extension CalendarViewController {
         let u_id = Session.getInteger(forKey: Session.ID)
         let tc = Session.getString(forKey: Session.TOKEN_CODE)
 
-        let url = URL(string: Utils.BASE_URL + "v2/calendar/feedback")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let param: [String: String] = ["userId": "\(u_id)", "token": "\(tc)", "e_id": "\(eId)", "feedback_code": "\(code)"]
 
         Alamofire.request(url, method: .post, parameters: param)
@@ -307,7 +307,7 @@ extension CalendarViewController {
         let u_id = Session.getInteger(forKey: Session.ID)
         let tc = Session.getString(forKey: Session.TOKEN_CODE)
 
-        let url = URL(string: Utils.BASE_URL + "v2/calendar/list")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let param: [String: String] = ["userId": "\(u_id)", "token": "\(tc)"]
         //NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData())
         Alamofire.request(url, method: .post, parameters: param)

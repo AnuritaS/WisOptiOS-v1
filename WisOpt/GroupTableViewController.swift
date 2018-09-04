@@ -61,7 +61,7 @@ class GroupTableViewController: UITableViewController {
     }
 
     func addToken(userId: Int, token: String) {
-        let url = URL(string: Utils.BASE_URL + "v2/device/add")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let param: [String: String] = ["userId": "\(userId)", "token": "\(token)", "type": "iOS"]
 
         Alamofire.request(url, method: .post, parameters: param)
@@ -194,7 +194,7 @@ class GroupTableViewController: UITableViewController {
         //print("\(u_id)")
         let tc = Session.getString(forKey: Session.TOKEN_CODE)
         
-        let url = URL(string: Utils.BASE_URL + "v2/show")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let param: [String: String] = ["token": tc, "userId": "\(u_id)"]
         //NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData())
         Alamofire.request(url, method: .post, parameters: param)

@@ -158,7 +158,7 @@ class RegistrationViewController: UIViewController, BEMCheckBoxDelegate {
         print("\(regId)")
         print("\(email)")
 
-        let url = URL(string: Utils.BASE_URL + "v2/register")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let param: [String: String] = ["university": "\(university)", "profession": "\(profession)", "email": "\(email)", "name": "\(name)", "gender": "\(gender)", "reg_id": "\(regId)"]
 
         Alamofire.request(url, method: .post, parameters: param)

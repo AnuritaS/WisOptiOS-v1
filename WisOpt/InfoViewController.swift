@@ -158,7 +158,7 @@ class InfoViewController: UIViewController {
 
         let tc = Session.getString(forKey: Session.TOKEN_CODE)
 
-        let url = URL(string: Utils.BASE_URL + "v2/delete")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let param: [String: String] = ["userId": "\(u_id)", "groupId": "\(grp_id)", "user_code": "\(tc)"]
 
         Alamofire.request(url, method: .post, parameters: param)
@@ -194,7 +194,7 @@ class InfoViewController: UIViewController {
     func getMembers() {
         let g_id = group!.groupId!
 
-        let url = URL(string: Utils.BASE_URL + "v2/members")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let tc = Session.getString(forKey: Session.TOKEN_CODE)
         
         let param: [String: String] = ["token": tc, "groupId": "\(g_id)"]
@@ -290,7 +290,7 @@ class InfoViewController: UIViewController {
 
         b.isEnabled = false
 
-        let url = URL(string: Utils.BASE_URL + "v2/members/request")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let param: [String: Any] = ["token": Session.getString(forKey: Session.TOKEN_CODE), "userId": "\(id)", "groupId": "\(gId)", "status": "\(title)"]
 
         Alamofire.request(url, method: .post, parameters: param)
@@ -375,7 +375,7 @@ class InfoViewController: UIViewController {
             }
 
 
-            let urlString = Utils.BASE_URL + "barcode/\(self.group!.groupCode!).png"
+            let urlString = Utils.BASE_URL + "API"
             Alamofire.download(urlString, to: destination).response { response in
                 //print("Response: \(response)")
                 self.buttonB.isEnabled = true

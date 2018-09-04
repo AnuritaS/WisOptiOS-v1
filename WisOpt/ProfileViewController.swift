@@ -83,7 +83,7 @@ class ProfileViewController: UIViewController {
         let u_id = Session.getInteger(forKey: Session.ID)
         let tc = Session.getString(forKey: Session.TOKEN_CODE)
         //print("STUDENT", self.studentId, u_id)
-        let url = URL(string: Utils.BASE_URL + "v2/studentdata")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let param: [String: String] = ["id": "\(u_id)", "token": "\(tc)", "studentId": "\(self.studentId)"]
         NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData())
         Alamofire.request(url, method: .post, parameters: param)

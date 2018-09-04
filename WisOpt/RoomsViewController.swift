@@ -215,7 +215,7 @@ class RoomsViewController: UIViewController, BEMCheckBoxDelegate {
     func searchRoom(room: String, current_day: String, current_time: String, block: String, u_id: Int) {
         searchB.isEnabled = false
 
-        let url = URL(string: Utils.BASE_URL + "room/v2/search/iphone")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let tc = Session.getString(forKey: Session.TOKEN_CODE)
         
         let param: [String: String] = ["token": tc, "room": "\(room)", "current_day": "\(current_day)", "current_time": "\(current_time)", "block": "\(block)", "u_id": "\(u_id)"]
@@ -263,7 +263,7 @@ class RoomsViewController: UIViewController, BEMCheckBoxDelegate {
     func vacantRoom(current_day: String, current_time: String, block: String) {
         searchB.isEnabled = false
 
-        let url = URL(string: Utils.BASE_URL + "room/v2/vacant")!
+        let url = URL(string: Utils.BASE_URL + "API")!
         let tc = Session.getString(forKey: Session.TOKEN_CODE)
         
         let param: [String: String] = ["token": tc, "current_day": "\(current_day)", "current_time": "\(current_time)", "block": "\(block)"]
